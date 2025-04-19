@@ -491,3 +491,323 @@ img {
 .feature__item p {
   color: var(--text-light);
 }
+
+/* Footer */
+
+.footer {
+  background-color: var(--primary-color);
+
+  color: var(--white);
+
+  padding: 4rem 2rem;
+}
+
+.footer__container {
+  max-width: var(--container-width);
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 2rem;
+
+  align-items: start;
+}
+
+.footer__logo {
+  font-size: 1.75rem;
+
+  font-weight: 700;
+
+  margin-bottom: 1.5rem;
+
+  display: flex;
+
+  align-items: center;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+.footer__logo .logo__circle {
+  margin-right: 0.5rem;
+}
+
+.footer__section-title {
+  font-size: 1.2rem;
+
+  font-weight: 600;
+
+  color: var(--secondary-color);
+
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+
+  padding: 0;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.footer__links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer__links a {
+  color: rgba(255, 255, 255, 0.8);
+
+  transition: color var(--transition-duration) ease-in-out;
+
+  display: block; /* لجعل منطقة النقر أكبر */
+}
+
+.footer__links a:hover {
+  color: var(--accent-color); /* لون hover مميز */
+}
+
+.footer__contact-info {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.footer__contact-info p {
+  color: rgba(255, 255, 255, 0.8);
+
+  margin-bottom: 0.5rem;
+}
+
+.footer__social {
+  list-style: none;
+
+  padding: 0;
+
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
+}
+
+.footer__social a {
+  color: var(--white);
+
+  font-size: 1.5rem;
+
+  transition: color var(--transition-duration) ease-in-out;
+}
+
+.footer__social a:hover {
+  color: var(--accent-color);
+}
+
+.footer__newsletter form {
+  display: flex;
+
+  gap: 0.5rem;
+}
+
+.footer__newsletter input[type="email"] {
+  padding: 0.75rem;
+
+  border: none;
+
+  border-radius: var(--border-radius);
+
+  color: var(--text-dark);
+
+  flex-grow: 1;
+}
+
+.footer__newsletter button {
+  background-color: var(--secondary-color);
+
+  color: var(--white);
+
+  border: none;
+
+  padding: 0.75rem 1.5rem;
+
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: background-color var(--transition-duration) ease-in-out;
+}
+
+.footer__newsletter button:hover {
+  background-color: darken(var(--secondary-color), 10%);
+}
+
+.footer__copyright {
+  font-size: 0.9rem;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  margin-top: 3rem;
+
+  text-align: center;
+
+  grid-column: 1 / -1;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.8s ease-out 1s forwards;
+}
+
+.footer__copyright::before {
+  content: "";
+
+  display: block;
+
+  width: 50px;
+
+  height: 2px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+
+  margin: 1rem auto;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 950px) {
+  .hero {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding-top: 7rem;
+  }
+
+  .hero__content {
+    text-align: center;
+  }
+
+  .hero__image {
+    order: -1;
+
+    margin-bottom: 2rem;
+
+    animation: fadeInUp 1s ease-out 0.7s forwards;
+
+    transform: translateX(0);
+  }
+
+  .hero__stats {
+    justify-content: space-around;
+
+    gap: 1.5rem;
+  }
+
+  .navbar__menu {
+    display: none;
+
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 60px;
+
+    left: 0;
+
+    width: 100%;
+
+    background-color: var(--white);
+
+    box-shadow: var(--shadow-light);
+
+    padding: 1rem;
+
+    text-align: center;
+
+    gap: 0.5rem;
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+
+  .navbar__actions {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature__item {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    gap: 2rem;
+
+    padding-top: 7rem;
+  }
+
+  .hero__stats {
+    gap: 2rem;
+  }
+
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Keyframe Animations */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
