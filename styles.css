@@ -256,3 +256,144 @@ img {
 
   display: none; /* Hide on larger screens */
 }
+/* Hero Section */
+
+.hero {
+  padding: 8rem 2rem 6rem;
+
+  max-width: var(--container-width);
+
+  margin-inline: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 3rem;
+
+  align-items: center;
+}
+
+.hero__content {
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  color: var(--text-dark);
+
+  margin-bottom: 1.5rem;
+
+  line-height: 1.2;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+
+  color: var(--text-light);
+
+  margin-bottom: 2rem;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 1s ease-out 0.8s forwards;
+}
+
+.hero__search {
+  display: flex;
+
+  gap: 0.75rem;
+
+  margin-bottom: 2.5rem;
+
+  opacity: 0;
+
+  animation: fadeIn 1s ease-out 1.1s forwards;
+}
+
+.search__input {
+  flex-grow: 1;
+
+  padding: 1rem;
+
+  border: 1px solid var(--text-light);
+
+  border-radius: var(--border-radius);
+
+  font-size: 1rem;
+
+  outline: none;
+}
+
+.search__button {
+  padding: 1rem 1.75rem;
+}
+
+/* Improved Hero Stats */
+
+.hero__stats {
+  display: flex;
+
+  justify-content: center; /* Center items horizontally */
+
+  gap: 3rem;
+
+  padding: 2rem 0;
+
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle background */
+
+  border-radius: var(--border-radius);
+
+  box-shadow: var(--shadow-light);
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation: fadeInUp 1s ease-out 1.4s forwards;
+}
+
+.stats__item {
+  text-align: center;
+}
+
+.stats__number {
+  font-size: 2.5rem;
+
+  font-weight: 700;
+
+  color: var(--accent-color); /* Highlight color for numbers */
+
+  margin-bottom: 0.5rem;
+
+  line-height: 1;
+}
+
+.stats__label {
+  color: var(--white);
+
+  font-size: 1rem;
+
+  opacity: 0.8;
+}
+
+.hero__image {
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateX(50px);
+
+  animation: slideInRight 1s ease-out 0.7s forwards;
+}

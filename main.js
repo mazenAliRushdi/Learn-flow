@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM is fully loaded and parsed");
 
-  // Mobile Navigation Toggle
+  // Mobile Navigation
   const menuToggle = document.querySelector(".navbar__toggle");
   const mainMenu = document.querySelector(".navbar__menu");
 
